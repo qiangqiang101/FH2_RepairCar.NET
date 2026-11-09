@@ -1,0 +1,11 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Debug" />
+    <BuildType Name="Release" />
+    <!-- The mod as a NativeAOT DLL (Build makes the native DLL). -->
+    <BuildType Name="Aot" />
+  </Configurations>
+  <!-- The SDK isn't in this solution on purpose: RepairCar.vbproj references it, and MSBuild builds it
+       from the files on disk each time, so changes to the SDK are always picked up. -->
+  <Project Path="RepairCar.vbproj" />
+</Solution>

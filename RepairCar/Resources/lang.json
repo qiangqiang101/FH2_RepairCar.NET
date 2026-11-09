@@ -1,0 +1,74 @@
+{
+  "codes": [
+    "BR",
+    "DE",
+    "FR",
+    "ES",
+    "MX",
+    "IT",
+    "JP",
+    "KO",
+    "CHT",
+    "PL",
+    "RU",
+    "NL"
+  ],
+  "texts": {
+    "Repair": {
+      "BR": "Reparar",
+      "DE": "Reparieren",
+      "FR": "Réparer",
+      "ES": "Reparar",
+      "MX": "Reparar",
+      "IT": "Riparare",
+      "JP": "修理",
+      "KO": "수리",
+      "CHT": "修復",
+      "PL": "Napraw",
+      "RU": "Ремонтировать",
+      "NL": "Repareren"
+    },
+    "Repaired your {0} for $100": {
+      "BR": "Reparou o seu {0} por $100",
+      "DE": "Dein {0} wurde für 100 $ repariert",
+      "FR": "{0} réparé pour 100 $",
+      "ES": "Se reparó tu {0} por $100",
+      "MX": "Se reparó tu {0} por $100",
+      "IT": "Riparato il tuo {0} per 100 $",
+      "JP": "{0}を$100で修理しました",
+      "KO": "{0}을(를) $100에 수리했습니다",
+      "CHT": "已花費 $100 修復您的 {0}",
+      "PL": "Naprawiono twój {0} za 100 $",
+      "RU": "Отремонтировал ваш {0} за $100",
+      "NL": "Je {0} is gerepareerd voor $ 100"
+    },
+    "Yes": {
+      "BR": "Sim",
+      "DE": "Ja",
+      "FR": "Oui",
+      "ES": "Sí",
+      "MX": "Sí",
+      "IT": "Sì",
+      "JP": "はい",
+      "KO": "예",
+      "CHT": "是",
+      "PL": "Tak",
+      "RU": "Да",
+      "NL": "Ja"
+    },
+    "No": {
+      "BR": "Não",
+      "DE": "Nein",
+      "FR": "Non",
+      "ES": "No",
+      "MX": "No",
+      "IT": "No",
+      "JP": "いいえ",
+      "KO": "아니요",
+      "CHT": "否",
+      "PL": "Nie",
+      "RU": "Нет",
+      "NL": "Nee"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- The FH2ModPlatform SDK, from its source next to this repo (GitHub\FH2-ModPlatform.NET):
+       always the latest, and its build setup (the fh2mod_init entry, Hosted or Aot, copying into the game). -->
+  <PropertyGroup>
+    <FH2SdkDir>$(MSBuildThisFileDirectory)..\..\FH2-ModPlatform.NET\src\FH2ModPlatform\</FH2SdkDir>
+  </PropertyGroup>
+  <Import Project="$(FH2SdkDir)build\FH2ModPlatform.props" />
+
+  <PropertyGroup>
+    <RootNamespace>RepairCar</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <!-- The Mod class, with its root namespace: Platform.NET (and NativeAOT) start this one. -->
+    <FH2ModType>RepairCar.RepairCar</FH2ModType>
+    <Version>0.1.0</Version>
+    <OptionStrict>On</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <!-- Visual Studio's own "is it up to date?" check can't see SDK changes made outside it (a
+         new file in the SDK, say); this lets MSBuild decide every time, which picks them up. -->
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+    <FileVersion>1.0.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\lang.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- LogicalName: VB would call it "RepairCar.lang.json"; Resources.Bytes("lang.json") looks it up by this name. -->
+    <EmbeddedResource Include="Resources\lang.json" LogicalName="lang.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- build: the SDK's props/targets come from the source above, not the package too (twice breaks NativeAOT). -->
+    <PackageReference Include="FH2ModPlatform" Version="0.9.0" ExcludeAssets="build;buildTransitive" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="My Project\Resources.Designer.vb">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <Import Project="$(FH2SdkDir)build\FH2ModPlatform.targets" />
+
+</Project>
