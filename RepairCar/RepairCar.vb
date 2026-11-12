@@ -1,3 +1,4 @@
+Imports System.Reflection
 Imports FH2
 Imports FH2ModPlatform
 
@@ -8,10 +9,10 @@ Public Class RepairCar
 
     Public Overrides ReadOnly Property Info As ModInfo
         Get
-            Return New ModInfo("RepairCar", "1.0.0") With {
+            Return New ModInfo("RepairCar", "1.0.0.0") With {
                 .Description = "Repair Player's Car.",
                 .CheckUpdates = True,
-                .GithubRepo = "qiangqiang101/FH2_RepairCar.NET",
+                .GithubRepo = "qiangqiang101/FH2-ANNA-RepairCar.NET",
                 .OfflineOnly = False
             }
         End Get
@@ -44,7 +45,7 @@ Public Class RepairCar
         repairItem.Label = Tr("Repair")
         yesItem.Label = Tr("Yes")
         noItem.Label = Tr("No")
-        notify = Tr("Repaired your {0} for $100")
+        notify = Tr("Repaired your {0} for $100.")
     End Sub
 
     Private Sub RepairPlayerCar()

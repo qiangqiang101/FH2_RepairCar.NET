@@ -15,18 +15,10 @@ A small Forza Horizon 2 mod, written in VB.NET for [FH2 Mod Platform for .NET](h
 ## Requirements
 
 - Forza Horizon 2 (Azimuth) with [FH2 Mod Platform for .NET](https://github.com/qiangqiang101/FH2-ModPlatform.NET/releases) installed.
-- For the **Hosted** build only: the .NET 10 runtime (x64). The **NativeAOT** build needs nothing else.
 
 ## Installing
 
-Download a zip from [Releases](https://github.com/qiangqiang101/FH2_RepairCar.NET/releases) and extract it into your Azimuth folder (the one with `azimuth.exe`).
-
-| Zip | Installs | Use it when |
-|---|---|---|
-| `RepairCar-<version>-NativeAOT.zip` | `fh2-mods\RepairCar.dll` | Most players: one DLL, no .NET runtime needed |
-| `RepairCar-<version>-Hosted.zip` | `fh2-mods-dotnet\RepairCar\` | You already run hosted .NET mods through Platform.NET |
-
-Install **one** of them, not both, or the mod loads twice. To remove the mod, delete that file or folder.
+Download `RepairCar-<version>-NativeAOT.zip` from [Releases](https://github.com/qiangqiang101/FH2_RepairCar.NET/releases) and extract it into your Azimuth folder (the one with `azimuth.exe`). It installs one DLL, `fh2-mods\RepairCar.dll`, and needs no .NET runtime. To remove the mod, delete that file.
 
 ## Usage
 
@@ -74,11 +66,11 @@ The texts are in [RepairCar/Resources/lang.json](RepairCar/Resources/lang.json).
 
 ## Releasing
 
-[.github/workflows/build.yml](.github/workflows/build.yml) builds both zips on every push and pull request, and uploads them as artifacts. To release:
+[.github/workflows/build.yml](.github/workflows/build.yml) builds the NativeAOT zip when a release is published, or when you start it with **Run workflow** on the Actions tab, and uploads it as an artifact. To release:
 
 1. Bump the version in `ModInfo` in [RepairCar.vb](RepairCar/RepairCar.vb).
 2. Publish a GitHub release tagged with that version (`1.0.1` or `v1.0.1`). The workflow fails if they differ, because the in-game update check compares the two.
-3. The workflow attaches the zips to the release.
+3. The workflow attaches the zip to the release.
 
 ## License
 
