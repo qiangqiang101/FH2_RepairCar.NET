@@ -14,7 +14,7 @@ A small Forza Horizon 2 mod, written in VB.NET for [FH2 Mod Platform for .NET](h
 
 ## Requirements
 
-- Forza Horizon 2 (Azimuth) with [FH2 Mod Platform for .NET](https://github.com/qiangqiang101/FH2-ModPlatform.NET/releases) installed.
+- Forza Horizon 2 (Azimuth) with the [FH2 Mod Platform](https://github.com/Trinculo54/fh2-mod-platform) 2.8.0 or later. No .NET runtime or Platform.NET needed.
 
 ## Installing
 
